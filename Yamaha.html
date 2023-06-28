@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="text-center text-success">Yamaha Bikes</h1>
+{% for i in mylist %}
+          <div class="container" align="center">
+          <div class="gallery">
+              <a target="_blank" href="{{i.0}}">Bike Name:<b class="text-primary">{{i.2}}</b><br>
+                <img src="{{i.3}}" alt="Cinque Terre" >
+              </a><br>
+              <i> price:<b>{{i.1}}</b> </i>
+            </div>
+          </div>
+          {% endfor %}
+
+{% endblock content %}

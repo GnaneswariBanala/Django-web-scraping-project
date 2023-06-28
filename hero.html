@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block content %}
+<h1 class="text-center text-success">Hero Bikes</h1>
+{% for i in mylist1 %}
+<div class="container" align="center">
+<div class="gallery">
+    <hr>
+    <hr>
+    <hr>
+    <a target="_blank" href="{{i.3}}">Bike Name:<b class="text-primary">{{i.2}}</b><br>
+      <img src="{{i.0}}" alt="not available" height="150" width="250" >
+    </a><br>
+          <i> price:<b>{{i.1}}</b> </i>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock content  %}
